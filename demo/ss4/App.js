@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Caculator from './components/Caculator';
+import {StudentList} from "./components/student/StudentList";
 
 function App() {
   return (
     <>
-      <Caculator/>
-    </>
+      <StudentList/>
+      </>
   );
 }
 

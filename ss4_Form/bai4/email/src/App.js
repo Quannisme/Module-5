@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Caculator from './components/Caculator';
+import { Email } from './components/Email';
 
 function App() {
   return (
     <>
-      <Caculator/>
+      <Email/>
     </>
   );
 }

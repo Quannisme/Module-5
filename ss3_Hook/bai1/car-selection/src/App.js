@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Caculator from './components/Caculator';
+import CarSelection from './components/CarSelect';
 
 function App() {
   return (
     <>
-      <Caculator/>
+      <CarSelection/>
     </>
   );
 }

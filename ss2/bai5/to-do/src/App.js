@@ -1,12 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Caculator from './components/Caculator';
+import ToDo from './components/ToDo';
 
 function App() {
   return (
-    <>
-      <Caculator/>
-    </>
+      <ToDo/>
   );
 }
 

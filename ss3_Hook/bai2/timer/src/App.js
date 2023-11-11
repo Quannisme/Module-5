@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Caculator from './components/Caculator';
+import Timer from './components/Timer';
 
 function App() {
   return (
     <>
-      <Caculator/>
+      <Timer/>
     </>
   );
 }

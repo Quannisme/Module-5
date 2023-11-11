@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Caculator from './components/Caculator';
+import { YTe } from './components/YTe';
 
 function App() {
   return (
     <>
-      <Caculator/>
+      <YTe/>
     </>
   );
 }
