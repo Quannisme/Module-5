@@ -15,7 +15,6 @@ export function StudentList() {
     useEffect(() => {
         //Call API để lấy danh sách
         getAllStudent();    
-
     }, [name]);
 
     const getAllStudent = async () => {

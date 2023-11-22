@@ -13,33 +13,42 @@ export function ToDoList(){
     //     title:Yup.string()
     //     .required("Khong duoc de trong")
     // };
-    const toDoListSchema = Yup.object().shape({
-      title: Yup.string().required("Không được để trống")
-  });
-
-  const handleSubmit = (values) => {
-      axios.post("https://jsonplaceholder.typicode.com/todos", values)
-      .then(response => {
-          alert("Thêm thành công");
-          // Xử lý thêm sau khi thành công (ví dụ: cập nhật UI)
-      })
-      .catch(error => {
-          console.error("Có lỗi xảy ra:", error);
-          // Xử lý lỗi
-      });
-  };
+    const changeText=(props , value)=>{
+        setTodo(prev=>({
+            ...prev,
+            [props]:value
+        }))
+    };
+    const handleSubmit=()=>{
+         axios.post("http://localhost:8080/list",todo),
+         alert("Thêm thành công")
+    };
+    // return(
+    //     <>
+    //         <Formik
+    //         initialValues={toDoListInit}
+    //         validationSchema={Yup.object().shape(toDoListValidate)}
+    //         onSubmit={(value=>{
+    //             handleSubmit(value);
+    //         })}>
+    //             <Form>
+    //                 <h1>Todo List</h1>
+    //                 <Field type="text" name="title" onChange={(evt)=>changeText('title',evt.target.value)}/>
+    //                 <ErrorMessage name="title" component="span"></ErrorMessage>
+    //                 <button type="submit">Submit</button>
+    //             </Form>
+    //         </Formik>
+    //     </>
+    // );
     return (
-      <Formik
-          initialValues={{ title: "" }}
-          validationSchema={toDoListSchema}
-          onSubmit={handleSubmit}
-      >
-          <Form>
-              <h1>Todo List</h1>
-              <Field type="text" name="title"/>
-              <ErrorMessage name="title" component="span"/>
-              <button type="submit">Submit</button>
-          </Form>
-      </Formik>
-  );
+        <div>
+          <h1>To Do List</h1>
+          <input
+            type="text"
+            name="title"
+            onChange={(evt)=>changeText('title',evt.target.value)}
+          />
+          <button onClick={() => handleSubmit()}>Submit</button>
+        </div>
+      );
 }

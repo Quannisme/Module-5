@@ -4,13 +4,13 @@ import axios from "axios";
 export function ListToDo(){
     const [list,setList]=useState([]);
     useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/todos").then((res) => {
+        axios.get("http://localhost:8080/list").then((res) => {
           setList(res.data);
         });
       }, []);
     return(
         <>
-            <div>
+            <div className="list">
                 {
                     list.map((values, index) => {
                         return (
