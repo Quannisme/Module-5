@@ -10,5 +10,7 @@
       "quantity": 123,
       "id": 6
     }
-  ]
+  ],
+  "total": 100, 
+  "total_pages": 10
 }

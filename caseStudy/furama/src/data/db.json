@@ -1,172 +1,145 @@
 {
-    "facility": [
-      {
-        "cId": 1,
-        "type":"Villa",
-        "name": "Villa A",
-        "usageArea": 100,
-        "rentalCost": 200,
-        "maxGuest": 15,
-        "rentalType": "Daily",
-        "roomStandards":"Không có",
-        "poolArea":2000,
-        "numberFloor":2,
-        "otherConvenient": "TV, Wifi, AC, Breakfast",
-        "imgURL": "https://plus.unsplash.com/premium_photo-1682285212027-6af0d0f70e07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
-      },
-      {
-        "cId": 2,
-        "type":"Villa",
-        "name": "Villa B",
-        "usageArea": 150,
-        "rentalCost": 100,
-        "maxGuest": 10,
-        "rentalType": "Hourly",
-        "roomStandards":"Không có",
-        "poolArea":2000,
-        "numberFloor":2,
-        "otherConvenient": "TV, Wifi, AC",
-        "imgURL": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-      },
-      {
-        "cId": 3,
-        "type":"Villa",
-        "name": "Villa C",
-        "usageArea": 150,
-        "rentalCost": 100,
-        "maxGuest": 5,
-        "rentalType": "Monthly",
-        "roomStandards":"Không có",
-        "poolArea":2000,
-        "numberFloor":2,
-        "otherConvenient": "TV, Wifi, AC",
-        "imgURL": "https://plus.unsplash.com/premium_photo-1682913629540-3857602b540c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80"
-      },
-      {
-        "cId": 4,
-        "type":"House",
-        "name": "House A",
-        "usageArea": 150,
-        "rentalCost": 100,
-        "maxGuest": 5,
-        "rentalType": "Monthly",
-        "roomStandards":"Không có",
-        "numberFloor":2,
-        "otherConvenient": "TV, Wifi, AC",
-        "imgURL": "https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-      },
-      {
-        "cId": 5,
-        "type":"House",
-        "name": "House B",
-        "usageArea": 150,
-        "rentalCost": 100,
-        "maxGuest": 5,
-        "rentalType": "Hourly",
-        "roomStandards":"Không có",
-        "numberFloor":2,
-        "otherConvenient": "TV, Wifi, AC",
-        "imgURL": "https://media.architecturaldigest.com/photos/628fb43b978896c06b13b204/16:9/w_2560%2Cc_limit/GettyImages-957245348.jpg"
-      },
-      {
-        "cId": 6,
-        "type":"Room",
-        "name": "Garden",
-        "usageArea": 80,
-        "rentalCost": 2,
-        "maxGuest": 16,
-        "rentalType": "Daily",
-        "freeService":"Sân bóng",
-        "imgURL": "https://media.istockphoto.com/id/1347784849/photo/scenic-view-of-a-beautiful-landscape-garden-with-a-green-mowed-lawn.jpg?s=612x612&w=0&k=20&c=VU6cE_762lTNwqFeuc1A-JFksy6HcXM35Xq3ox3-Az0="
-      }
-    ] ,
-
-
-    
-    "employee": [
-      {
-        "id": 1,
-        "name": "Nguyễn Văn Dũng",
-        "birthday": "1970-11-07",
-        "identity_card": 456231786,
-        "salary": 10000000,
-        "phone": "0901234121",
-        "email": "annguyen@gmaul.com",
-        "Degree": "Đại Học",
-        "Position": "Quản Lý",
-        "Division": "Sale-Marketing"
-      },
-      {
-        "id": 2,
-        "name": "Lê Văn Bình",
-        "birthday": "1997-04-09",
-        "identity_card": 654231234,
-        "salary": 7000000,
-        "phone": "0934212314",
-        "email": "binhlv@gmail.com",
-        "Degree": "Cao Đẳng",
-        "Position": "Quản Lý",
-        "Division": "Hành chính"
-      },
-      {
-        "id": 3,
-        "name": "Hồ Thị Yến",
-        "birthday": "1995-12-12",
-        "identity_card": 999231723,
-        "salary": 14000000,
-        "phone": "0412352315",
-        "email": "thiyen@gmail.com",
-        "Degree": "Đại Học",
-        "Position": "Quản Lý",
-        "Division": "Hành Chính"
-      },
-      {
-        "id": 4,
-        "name": "Võ Công toản",
-        "birthday": "1980-04-04",
-        "identity_card": 123231365,
-        "salary": 17000000,
-        "phone": "0374443232",
-        "email": "toan0404@gmail.com",
-        "Degree": "Sau Đại Học",
-        "Position": "Quản Lý",
-        "Division": "Quản Lý"
-      },
-      {
-        "id": 5,
-        "name": "Khúc Nguyễn An Nghi",
-        "birthday": "2000-11-08",
-        "identity_card": 964542311,
-        "salary": "7000000",
-        "phone": "0978653213",
-        "email": "annghi20@gmail.com",
-        "Degree": "Cao Đẳng",
-        "Position": "Nhân viên",
-        "Division": "Phục Vụ"
-      },
-      {
-        "id": 6,
-        "name": "Nguyễn Hữu Hà",
-        "birthday": "1993-01-01",
-        "identity_card": 534323231,
-        "salary": "8000000",
-        "phone": "0941234553",
-        "email": "nhhh@gmail.com",
-        "Degree": "Cao Đẳng",
-        "Position": "Nhân viên",
-        "Division": "Phục Vụ"
-      },
-      {
-        "id": 7,
-        "name": "Nguyễn Hà Đông",
-        "birthday": "1989-09-03",
-        "identity_card": 964542311,
-        "salary": "9000000",
-        "phone": "0642123111",
-        "email": "dongha@gmail.com",
-        "Degree": "Cao Đẳng",
-        "Position": "Nhân viên",
-        "Division": "Hành Chính"
-      }
-    ]
-  }
+  "facility": [
+    {
+      "cId": 1,
+      "type": "Villa",
+      "name": "Villa A",
+      "usageArea": 100,
+      "rentalCost": 200,
+      "maxGuest": 15,
+      "rentalType": "Daily",
+      "roomStandards": "Không có",
+      "poolArea": 2000,
+      "numberFloor": 2,
+      "otherConvenient": "TV, Wifi, AC, Breakfast",
+      "imgURL": "https://plus.unsplash.com/premium_photo-1682285212027-6af0d0f70e07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+    },
+    {
+      "cId": 2,
+      "type": "Villa",
+      "name": "Villa B",
+      "usageArea": 150,
+      "rentalCost": 100,
+      "maxGuest": 10,
+      "rentalType": "Hourly",
+      "roomStandards": "Không có",
+      "poolArea": 2000,
+      "numberFloor": 2,
+      "otherConvenient": "TV, Wifi, AC",
+      "imgURL": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+    },
+    {
+      "cId": 3,
+      "type": "Villa",
+      "name": "Villa C",
+      "usageArea": 150,
+      "rentalCost": 100,
+      "maxGuest": 5,
+      "rentalType": "Monthly",
+      "roomStandards": "Không có",
+      "poolArea": 2000,
+      "numberFloor": 2,
+      "otherConvenient": "TV, Wifi, AC",
+      "imgURL": "https://plus.unsplash.com/premium_photo-1682913629540-3857602b540c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80"
+    },
+    {
+      "cId": 4,
+      "type": "House",
+      "name": "House A",
+      "usageArea": 150,
+      "rentalCost": 100,
+      "maxGuest": 5,
+      "rentalType": "Monthly",
+      "roomStandards": "Không có",
+      "numberFloor": 2,
+      "otherConvenient": "TV, Wifi, AC",
+      "imgURL": "https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    },
+    {
+      "cId": 5,
+      "type": "House",
+      "name": "House B",
+      "usageArea": 150,
+      "rentalCost": 100,
+      "maxGuest": 5,
+      "rentalType": "Hourly",
+      "roomStandards": "Không có",
+      "numberFloor": 2,
+      "otherConvenient": "TV, Wifi, AC",
+      "imgURL": "https://media.architecturaldigest.com/photos/628fb43b978896c06b13b204/16:9/w_2560%2Cc_limit/GettyImages-957245348.jpg"
+    },
+    {
+      "cId": 6,
+      "type": "Room",
+      "name": "Garden",
+      "usageArea": 80,
+      "rentalCost": 2,
+      "maxGuest": 16,
+      "rentalType": "Daily",
+      "freeService": "Sân bóng",
+      "imgURL": "https://media.istockphoto.com/id/1347784849/photo/scenic-view-of-a-beautiful-landscape-garden-with-a-green-mowed-lawn.jpg?s=612x612&w=0&k=20&c=VU6cE_762lTNwqFeuc1A-JFksy6HcXM35Xq3ox3-Az0="
+    }
+  ],
+  "employee": [
+    {
+      "name": "TU Tu",
+      "birthday": "2005-02-12",
+      "identity_card": 123,
+      "salary": 123,
+      "phone": 123,
+      "email": "quanismevn@gmail.com",
+      "Degree": "Cao đẳng",
+      "Position": "",
+      "Division": "",
+      "id": 5
+    },
+    {
+      "name": "TT",
+      "birthday": "2023-11-03",
+      "identity_card": 123,
+      "salary": 123,
+      "phone": 123,
+      "email": "quanismevn@gmail.com",
+      "Degree": "Trung Cấp",
+      "Position": "Chuyên viên",
+      "Division": "",
+      "id": 6
+    },
+    {
+      "name": "Hai TT",
+      "birthday": "2002-12-12",
+      "identity_card": 123,
+      "salary": 123,
+      "phone": 123,
+      "email": "quanismevn@gmail.com",
+      "Degree": "Trung Cấp",
+      "Position": "Chuyên viên",
+      "Division": "Hành Chính",
+      "id": 7
+    },
+    {
+      "name": "Quan",
+      "birthday": "2009-12-12",
+      "identity_card": 123,
+      "salary": 123,
+      "phone": 123,
+      "email": "quanismevn@gmail.com",
+      "Degree": "Trung Cấp",
+      "Position": "",
+      "Division": "",
+      "id": 8
+    },
+    {
+      "name": "Thien",
+      "birthday": "2009-12-12",
+      "identity_card": 123,
+      "salary": 123,
+      "phone": 123,
+      "email": "quanismevn@gmail.com",
+      "Degree": "Cao đẳng",
+      "Position": "Phục vụ",
+      "Division": "Hành Chính",
+      "id": 9
+    }
+  ]
+}

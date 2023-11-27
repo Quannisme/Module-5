@@ -1,27 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import * as rentService from "../../service/RentService";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import * as rentService from "../../service/RentService";
-import "./Employee.css"
-import { useNavigate } from "react-router-dom";
 import { toast } from 'react-hot-toast';
-export function CreateEmployee() {
-  const [employee, setEmployee] = useState([]);
-  const navigate=useNavigate();
-  const checkAge=()=>{
-    const today=new Date();
-    return new Date(today.getFullYear()-18,today.getMonth(),today.getDate());
-  }
-  const initEmployee = {
-    name: "",
-    birthday: "",
-    identity_card: 0,
-    salary: 0,
-    phone: "",
-    email: "",
-    Degree: "Trung Cấp",
-    Position: "",
-    Division: "",
+export function UpdateEmployee() {
+  let { id } = useParams();
+  // update thì useState là rỗng
+  const [employee, setEmployee] = useState();
+  const Navigate = useNavigate();
+  useEffect(() => {
+    getFindById();
+  }, [id]);
+
+  const getFindById = async () => {
+    let temp = await rentService.getFindById(id);
+    console.log(temp);
+    setEmployee(temp);
   };
   const validateEmployee = {
     name: Yup.string()
@@ -30,7 +25,7 @@ export function CreateEmployee() {
         /^(?:[A-Z][a-z]*\s?)+$/,
         "Ký tự đầu tiên của mỗi từ phải viết hoa"
       ),
-    birthday: Yup.date().max(checkAge(),"Phai tren 18 tuoi").required("Không được bỏ trống"),
+    birthday: Yup.string().required("Không được bỏ trống"),
     identity_card: Yup.number().required("Không được bỏ trống"),
     salary: Yup.number().required("Không được bỏ trống"),
     phone: Yup.string().required("Không được bỏ trống"),
@@ -41,9 +36,23 @@ export function CreateEmployee() {
         "Email không hợp lệ"
       ),
   };
-  const handleSubmit = async (value) => {
-    await rentService.add(value);
-    navigate("/employee");
+  const updateNow = async (value) => {
+    await rentService.updateEmployee(id, value);
+    Navigate("/");
+  };
+  if (!employee) {
+    return null;
+  }
+  const initEmployee = {
+    name: employee.name,
+    birthday: employee.birthday,
+    identity_card: employee.identity_card,
+    salary: employee.salary,
+    phone: employee.phone,
+    email: employee.email,
+    Degree: employee.Degree,
+    Position: employee.Position,
+    Division: employee.Division,
   };
   return (
     <>
@@ -51,12 +60,12 @@ export function CreateEmployee() {
         initialValues={initEmployee}
         validationSchema={Yup.object().shape(validateEmployee)}
         onSubmit={(value) => {
-          handleSubmit(value);
-          toast.success('Đăng kí thành công')
+          updateNow(value);
+          toast.success("Cập nhật thành công");
         }}
       >
         <Form>
-        <div className="form-container">
+          <div className="form-container">
             <h1>Add new Employee</h1>
             <span>name</span>
             <Field name="name" type="text" />
@@ -101,27 +110,27 @@ export function CreateEmployee() {
               className="form-err"
             ></ErrorMessage>
             <label htmlFor="Degree">Degree</label>
-            <Field as="select" name="Degree" >
-            <option value={"Trung cấp"}>Trung cấp</option>
-            <option value={"Cao đẳng"}>Cao đẳng</option>
-            <option value={"Đại học"}>Đại học</option>
-            <option value={"Sau Đại học"}>Sau Đại học</option>
-          </Field>
+            <Field as="select" name="Degree">
+              <option value={"Trung cấp"}>Trung cấp</option>
+              <option value={"Cao đẳng"}>Cao đẳng</option>
+              <option value={"Đại học"}>Đại học</option>
+              <option value={"Sau Đại học"}>Sau Đại học</option>
+            </Field>
             <label htmlFor="Position">Position</label>
             <Field as="select" name="Position">
-            <option value={"Lễ tân"}>Lễ tân</option>
-            <option value={"Phục vụ"}>Phục vụ</option>
-            <option value={"Chuyên viên"}>Giám sát</option>
-            <option value={"Quản Lý"}>Quản lý</option>
-            <option value={"Giám đốc"}>Giám đốc</option>
-          </Field>
+              <option value={"Lễ tân"}>Lễ tân</option>
+              <option value={"Phục vụ"}>Phục vụ</option>
+              <option value={"Chuyên viên"}>Giám sát</option>
+              <option value={"Quản Lý"}>Quản lý</option>
+              <option value={"Giám đốc"}>Giám đốc</option>
+            </Field>
             <label htmlFor="Division">Division</label>
             <Field as="select" name="Division">
-            <option value={"Sale-Marketing"}>Sale-Marketing</option>
-            <option value={"Hành Chính"}>Hành Chính</option>
-            <option value={"Phục Vụ"}>Phục vụ</option>
-            <option value={"Quản Lý"}>Quản lý</option>
-          </Field>
+              <option value={"Sale-Marketing"}>Sale-Marketing</option>
+              <option value={"Hành Chính"}>Hành Chính</option>
+              <option value={"Phục Vụ"}>Phục vụ</option>
+              <option value={"Quản Lý"}>Quản lý</option>
+            </Field>
           </div>
           <button type="submit">Submit</button>
         </Form>
